@@ -172,6 +172,3 @@ volumeSlider.addEventListener("input", () => {
     }
 
 });
-
-
-

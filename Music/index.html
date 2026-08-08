@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <meta name="description" content="A modern, accessible music player with playlist, shuffle, and repeat controls">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <section class="music-player" aria-label="Music player">
+      <button type="button" class="playlist-toggle" aria-label="Open playlist" aria-expanded="false" aria-controls="playlist">
+        <i class="fa-solid fa-list-music" aria-hidden="true"></i>
+      </button>
+
+      <div class="loading-overlay" aria-live="polite" aria-busy="true">
+        <div class="loading-spinner" aria-hidden="true"></div>
+      </div>
+
+      <div class="image-section">
+        <img src="images/image.jpg" alt="Blinding Lights by The Weeknd album cover" class="cover">
+      </div>
+
+      <div class="song-details">
+        <h2 class="song-title">Blinding Lights</h2>
+        <p class="artist-name">The Weeknd</p>
+      </div>
+
+      <div class="progress-section" role="group" aria-labelledby="progress-label">
+        <span id="progress-label" class="visually-hidden">Playback progress</span>
+        <span class="current-time" id="current-time-label">0:00</span>
+        <input type="range"
+          class="progress-bar"
+          value="0"
+          min="0"
+          max="0"
+          step="1"
+          aria-labelledby="current-time-label"
+          aria-valuemin="0"
+          aria-valuemax="0"
+          aria-valuenow="0">
+        <span class="duration" id="duration-label">0:00</span>
+      </div>
+
+      <div class="controls" role="group" aria-label="Playback controls">
+        <button type="button" class="control-btn shuffle-btn" aria-label="Shuffle off" aria-pressed="false" title="Shuffle (S)">
+          <i class="fa-solid fa-shuffle" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="control-btn previous" aria-label="Previous track" title="Previous (Shift+←)">
+          <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="play-btn" aria-label="Play" title="Play/Pause (Space)">
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="control-btn next" aria-label="Next track" title="Next (Shift+→)">
+          <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="control-btn repeat-btn" aria-label="Repeat off" aria-pressed="false" title="Repeat (R)">
+          <i class="fa-solid fa-repeat" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="volume-section" role="group" aria-labelledby="volume-label">
+        <span id="volume-label" class="visually-hidden">Volume control</span>
+        <i class="fa-solid fa-volume-high volume-icon" aria-hidden="true"></i>
+        <input type="range"
+          class="volume-slider"
+          min="0"
+          max="100"
+          value="100"
+          step="1"
+          aria-labelledby="volume-label"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="100">
+      </div>
+
+      <div class="playlist" id="playlist" role="list" aria-label="Playlist">
+        <div class="playlist-items" role="presentation"></div>
+      </div>
+    </section>
+
+    <audio class="audio" preload="metadata"></audio>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.4.0/color-thief.min.js"></script>
+  <script src="js/songs.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
