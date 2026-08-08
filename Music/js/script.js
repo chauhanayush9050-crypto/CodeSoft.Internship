@@ -172,3 +172,8 @@ volumeSlider.addEventListener("input", () => {
     }
 
 });
+const loadingOverlay = document.querySelector(".loading-overlay");
+
+window.addEventListener("load", () => {
+    loadingOverlay.classList.add("hidden");
+});
