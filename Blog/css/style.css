@@ -1,9 +1,4 @@
-/* ===================================================================
-   ATELIER JOURNAL — luxury editorial theme
-   Palette : ink #0D1210 / panel #151B16 / ivory #F1ECE0
-             brass #C6A15B / brass-soft #8A7345 / hairline rgba ivory .14
-   Type    : Fraunces (display, serif, italic accents) + Manrope (body/UI)
-   =================================================================== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap');
 
@@ -67,7 +62,7 @@ img { max-width: 100%; display: block; }
   border-radius: 2px;
 }
 
-/* -------------------------------------------------- utility bits */
+
 
 .eyebrow {
   display: inline-flex;
@@ -96,7 +91,6 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(90deg, var(--gold-soft), var(--line) 40%);
 }
 
-/* -------------------------------------------------- navbar */
 
 .navbar {
   position: sticky;
@@ -160,7 +154,6 @@ img { max-width: 100%; display: block; }
   right: 0;
 }
 
-/* -------------------------------------------------- hero */
 
 .hero {
   max-width: var(--container);
@@ -213,7 +206,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.7;
 }
 
-/* -------------------------------------------------- section heading */
 
 .section-heading {
   max-width: var(--container);
@@ -250,7 +242,6 @@ img { max-width: 100%; display: block; }
   color: var(--ink);
 }
 
-/* -------------------------------------------------- filters */
 
 .filters {
   max-width: var(--container);
@@ -305,7 +296,6 @@ img { max-width: 100%; display: block; }
   border-color: var(--gold);
 }
 
-/* -------------------------------------------------- posts grid */
 
 .posts-section { padding-bottom: 40px; }
 
@@ -330,8 +320,7 @@ img { max-width: 100%; display: block; }
   transition: background 0.35s var(--ease);
 }
 
-/* brass corner-bracket signature: draws in on hover/focus */
-.post-card::before,
+
 .post-card::after {
   content: "";
   position: absolute;
@@ -437,7 +426,6 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.04em;
 }
 
-/* -------------------------------------------------- about */
 
 .about-section {
   max-width: var(--container);
@@ -465,7 +453,6 @@ img { max-width: 100%; display: block; }
   margin: 0;
 }
 
-/* -------------------------------------------------- footer */
 
 .footer {
   border-top: 1px solid var(--line-soft);
@@ -480,7 +467,7 @@ img { max-width: 100%; display: block; }
   color: var(--ink-faint);
 }
 
-/* -------------------------------------------------- responsive */
+
 
 @media (max-width: 640px) {
   .navbar { padding: 18px var(--edge); }
