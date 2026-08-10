@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <a href="#" class="logo">
+            My Blog
+        </a>
+
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#posts">Posts</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="create-post-btn" type="button">
+            + Create Post
+        </button>
+
+    </header>
+
+
+    <!-- Create Post Modal -->
+    <div class="post-modal">
+
+        <div class="post-form">
+
+            <h2>Create Post</h2>
+
+            <input
+                type="text"
+                class="post-title"
+                placeholder="Post title"
+            >
+
+            <select class="post-category">
+
+                <option value="javascript">
+                    JavaScript
+                </option>
+
+                <option value="web">
+                    Web Development
+                </option>
+
+                <option value="career">
+                    Career
+                </option>
+
+            </select>
+
+            <textarea
+                class="post-description"
+                placeholder="Write your post..."
+            ></textarea>
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="cancel-post"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="publish-post"
+                >
+                    Publish Post
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Hero -->
+    <main>
+
+        <section class="hero">
+
+            <span class="hero-label">
+                Personal Journal
+            </span>
+
+            <h1>
+                Thoughts,
+                <em>code</em>
+                &amp; everything in between.
+            </h1>
+
+            <p>
+                A personal space where I share what I learn,
+                build and experience while working with
+                web technologies.
+            </p>
+
+        </section>
+
+
+        <!-- Posts -->
+        <section class="posts-section" id="posts">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    Journal
+                </span>
+
+                <h2>
+                    Latest Posts
+                </h2>
+
+            </div>
+
+
+            <!-- Search + Filter -->
+            <div class="filters">
+
+                <input
+                    type="text"
+                    class="search-input"
+                    placeholder="Search posts..."
+                >
+
+                <select class="category-filter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="javascript">
+                        JavaScript
+                    </option>
+
+                    <option value="web">
+                        Web Development
+                    </option>
+
+                    <option value="career">
+                        Career
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Posts will appear here -->
+            <div
+                class="posts-grid"
+                id="posts-list"
+            ></div>
+
+        </section>
+
+
+        <!-- About -->
+        <section class="about-section" id="about">
+
+            <span class="section-label">
+                About
+            </span>
+
+            <h2>
+                About This Blog
+            </h2>
+
+            <p>
+                A place where I share what I learn,
+                build and experience while working
+                with web technologies.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 My Blog. Built with HTML, CSS &amp; JavaScript.
+        </p>
+
+    </footer>
+
+
+    <!-- Read Post Modal -->
+    <div class="read-modal">
+
+        <article class="read-post">
+
+            <button
+                class="read-close"
+                type="button"
+                aria-label="Close post"
+            >
+                ×
+            </button>
+
+            <span class="read-category"></span>
+
+            <h2 class="read-title"></h2>
+
+            <span class="read-date"></span>
+
+            <p class="read-text"></p>
+
+        </article>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
